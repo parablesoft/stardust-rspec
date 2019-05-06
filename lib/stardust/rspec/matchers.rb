@@ -1,7 +1,7 @@
-require "stardust/rspec/matchers/have_field"
-require "stardust/rspec/matchers/have_argument"
-require "stardust/rspec/matchers/return_type"
-require "stardust/rspec/matchers/be_able_to_return_null"
+require "stardust/rspec/matchers/graphql/have_field"
+require "stardust/rspec/matchers/graphql/have_argument"
+require "stardust/rspec/matchers/graphql/return_type"
+require "stardust/rspec/matchers/graphql/be_able_to_return_null"
 
 module Stardust
   module Rspec
