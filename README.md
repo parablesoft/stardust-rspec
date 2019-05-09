@@ -60,7 +60,21 @@ There are no matchers for resolve at the moment. What resolve does is what makes
 <hr/>
 
 
+##### Testing Mutations
 
+**Nullability**
+
+The class can return null
+```ruby
+it{should be_able_to_return_null}
+```
+The class cannot return null
+
+```ruby
+it{should_not be_able_to_return_null}
+```
+
+<hr/>
 
 ##### Testing Types
 
@@ -100,6 +114,25 @@ In the example below, we want to make sure that the type has a field named line\
 ```ruby
 it{should have_field(:line_items,[:line_item], null:false)}
 ```
+
+<hr/>
+
+##### Authorization
+
+Both ```mutations``` and ```queries``` can be tested with the authorization matchers.
+Set the ```subject``` to ```decribed_class```, then use a combination of the following three matchers to verify that your class is performing authorization as it should.
+factory_bot factory names should be passed in.
+
+```ruby
+  describe ".authorized?" do
+    subject {described_class}
+    it{should allow_anonymous(false)}
+    it{should allow_access_to [:dealer_user]}
+    it{should deny_access_to [:admin_user,:shop_user]}
+  end
+```
+
+
 
 <hr/>
 

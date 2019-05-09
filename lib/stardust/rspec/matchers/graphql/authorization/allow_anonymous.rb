@@ -2,10 +2,10 @@ module Stardust
   module Rspec
     module Matchers
       module GraphQL
-        module ReturnType
-          RSpec::Matchers.define :return_type do |expected|
+        module AllowAnonymous
+          RSpec::Matchers.define :allow_anonymous do |expected|
             match do |actual|
-              actual.get_type == expected
+              actual.authorized?(nil, current_user: nil) == expected
             end
           end
         end
