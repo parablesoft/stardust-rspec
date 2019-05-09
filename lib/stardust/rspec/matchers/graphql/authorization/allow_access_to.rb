@@ -1,4 +1,3 @@
-
 module Stardust
   module Rspec
     module Matchers

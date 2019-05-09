@@ -1,5 +1,4 @@
-
-require "stardust/rspec/matchers/graphql/graphql"
+require "stardust/rspec/matchers/graphql"
 module Stardust
   module Rspec
     module Matchers
