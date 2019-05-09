@@ -41,9 +41,17 @@ it{should have_argument({name: :id, type: :id, named_args: {required: true}})}
 ```
 
 **Nullability**
+
+The class can return null
 ```ruby
-it{should be_able_to_return_null(true)}
+it{should be_able_to_return_null}
 ```
+The class cannot return null
+
+```ruby
+it{should_not be_able_to_return_null}
+```
+
 
 **resolve**
 
