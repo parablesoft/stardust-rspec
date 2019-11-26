@@ -1,4 +1,5 @@
 require "stardust/rspec/railtie"
+require 'rspec/matchers'
 require "stardust/rspec/matchers"
 
 module Stardust

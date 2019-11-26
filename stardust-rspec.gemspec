@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.version     = Stardust::Rspec::VERSION
   spec.authors     = ["Vic Amuso"]
   spec.email       = ["vic@parablesoft.com"]
-  spec.homepage    = "https://github.com/hatch-software/stardust-rspec"
+  spec.homepage    = "https://github.com/parablesoft/stardust-rspec"
   spec.summary     = "Summary of Stardust::Rspec."
   spec.description = "Description of Stardust::Rspec."
   spec.license     = "MIT"
@@ -24,8 +24,8 @@ Gem::Specification.new do |spec|
   end
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
-
   spec.add_dependency "rails", ">= 5.0"
-
+  spec.add_dependency 'rspec-expectations'
+  spec.add_development_dependency 'rspec'
   spec.add_development_dependency "sqlite3"
 end
